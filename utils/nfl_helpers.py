@@ -28,8 +28,8 @@ def clean_nfl_scoring_data(df: pd.DataFrame) -> pd.DataFrame:
     df[["W", "L", "T", "PF", "PA", "W-L%"]] = df[["W", "L", "T", "PF", "PA", "W-L%"]].astype("Float64")
     df["games_played"] = df["W"] + df["L"] + df["T"]
 
-    df["pointsForPerGame"] = df["PF"] / df["games_played"]
-    df["pointsAgainstPerGame"] = df["PA"] / df["games_played"]
+    # df["pointsForPerGame"] = df["PF"] / df["games_played"]
+    # df["pointsAgainstPerGame"] = df["PA"] / df["games_played"]
 
     # Clean Up Stupid ass team names
     df["Tm"] = np.where(
